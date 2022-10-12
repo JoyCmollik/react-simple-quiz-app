@@ -1,0 +1,30 @@
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+
+const Header = () => {
+  return (
+		<header className='container mx-auto flex justify-between items-center h-32'>
+			{/* logo */}
+			<NavLink to='/'>
+				<img
+					className='object-cover h-28'
+					src='data:image/png;base64,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'
+					alt=''
+				/>
+			</NavLink>
+			<div className='flex items-center space-x-2'>
+				<NavLink to='/'>
+					<div className='text-xl'>Home</div>
+				</NavLink>
+				<NavLink to='/graph'>
+					<div className='text-xl'>Graph</div>
+				</NavLink>
+				<NavLink to='/blog'>
+					<div className='text-xl'>Blog</div>
+				</NavLink>
+			</div>
+		</header>
+  );
+}
+
+export default Header
